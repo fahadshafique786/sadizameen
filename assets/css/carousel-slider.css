@@ -83,7 +83,7 @@
 }
 #carousel-area .item .carousel-caption .price-sl {
   font-size: 30px;
-  color: #4caf50;
+  color: #fcc623;
   line-height: 36px;
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
@@ -114,7 +114,7 @@
   font-size: 40px;
 }
 #carousel-area .carousel-control i:hover {
-  color: #4caf50;
+  color: #fcc623;
 }
 #carousel-area .left.carousel-control {
   left: 5%;

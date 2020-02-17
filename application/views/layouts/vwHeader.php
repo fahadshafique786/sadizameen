@@ -43,7 +43,36 @@
         padding: 0;
         height: 600px;
       }
-    </style>       
+    </style>   
+
+
+	<style>
+	.header_btns {
+		background: transparent !important;
+		color: #333 !important;
+		box-shadow: none !important;
+		border: 1px solid #333 !important;
+		font-weight: bold;
+	}
+
+	.top-bar-bottom {
+		padding-bottom: 0px;
+		padding-top: 0;
+	}
+
+
+	.navbar-default .navbar-nav > li{
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	.header_btns:hover {
+		background: #fcc623 !important;
+		color: #fff !important;
+	}
+
+	</style>
+    
   </head>
 
   <body>  
@@ -51,7 +80,7 @@
     <div class="header">    
 
       <!-- Start Top Bar -->
-      <div class="top-bar">
+      <div class="top-bar hide dp-none hidden ">
         <div class="container">
           <div class="row">
             <div class="col-md-7 col-sm-6">
@@ -109,19 +138,19 @@
           <div class="row">
             <div class="col-md-5 col-sm-6">
               <div class="header-logo">
-                <a href="index.html"><img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt=""></a>
+                <a href=""><img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt=""></a>
               </div>
               <div class="name-title">
-                Multi-purpose Real Estate <br> HTML5 Template
+
               </div>  
             </div>
             <div class="col-md-7 col-sm-6">
               <div class="contact pull-right">
                 <div class="call">                  
                   <h3><i class="icon-phone"></i> (213) 974-3211</h3>
-                  <p>hello@estatex.com</p>
+                  <p>info@sadizameen.com</p>
                 </div>
-                  <div class="box-language">
+                  <div class="box-language hide">
                     <form id="form-language">
                       <div class="btn-group toggle-wrap">
                       <span class="toggle">
@@ -148,29 +177,9 @@
                     </div>
                     </form>
                   </div>
-                  <div class="box-currency">
-                    <form method="post" id="form-currency">
-                      <div class="btn-group toggle-wrap">
-                        <span class="toggle">
-                          <span>USD</span>
-                          <span class="hidden">Currency</span>
-                        </span>
-                        <ul class="toggle_cont pull-right">
-                          <li>
-                          <button class="currency-select selected" type="button" name="USD">
-                          $ USD </button>
-                          </li>
-                          <li>
-                          <button class="currency-select" type="button" name="EUR">
-                          € EUR
-                          </button>
-                          </li>
-                          <li>
-                          <button class="currency-select" type="button" name="GBP">
-                          £ GBP </button>
-                          </li>
-                        </ul>
-                      </div>
+                  <div class="box-currency ">
+						<a href="login" class="btn header_btns " name="USD">Login </a>
+						<a href="register" class="btn header_btns " name="USD">Register </a>
                     </form>
                   </div>
                   <div class="clear"></div>
@@ -191,7 +200,7 @@
                 <i class="fa fa-bars"></i>
               </button>
               <div class="logo-wrapper hidden">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="">
                   <img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt="">
                 </a>  
               </div>
@@ -200,12 +209,12 @@
               <!-- Start Navigation List -->
               <ul class="nav navbar-nav">
                 <li>
-                  <a class="active" href="index.html">
+                  <a class="active" href="Home">
                   Home
                   </a>
                   <ul class="dropdown">
                     <li>
-                      <a href="index.html">
+                      <a href="">
                         Home V1 + Rev Slider
                       </a>
                     </li>  
@@ -407,7 +416,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="contact.html">
+                  <a href="contact">
                   Contact Us
                   </a>
                 </li>
@@ -426,7 +435,7 @@
           </a>
           <ul class="dropdown">
             <li>
-              <a href="index.html">
+              <a href="">
                 Home V1 + Rev Slider
               </a>
             </li>  
@@ -618,7 +627,7 @@
           </ul>
         </li>
         <li>
-          <a href="contact.html">
+          <a href="contact">
           Contact Us
           </a>
         </li>
@@ -631,4 +640,3 @@
     <!-- Header Section End -->
     
     <!-- Large Map -->
-    <div id="google-map"></div>

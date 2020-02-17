@@ -46,7 +46,7 @@ header {
   margin-right: 5px;
 }
 .account-setting a:hover {
-  color: #4caf50;
+  color: #fcc623;
 }
 .top-bar-bottom {
   background: #F5F5F5;
@@ -167,7 +167,7 @@ ul.social-list li a i {
 .navbar-default .navbar-nav > li:hover > a,
 .navbar-default .navbar-nav > li > a.active {
   color: #fff;
-  background: #4caf50;
+  background: #fcc623;
   border-radius: 2px;
 }
 .navbar-default .navbar-nav > li > a i {
@@ -176,7 +176,7 @@ ul.social-list li a i {
 .navbar-default .navbar-nav .dropdown {
   position: absolute;
   left: 0;
-  border-top: 1px solid #4caf50;
+  border-top: 1px solid #fcc623;
   top: 100%;
   width: 234px;
   background-color: #fff;
@@ -226,12 +226,12 @@ ul.social-list li a i {
 .dropdown > li:hover > a,
 .sup-dropdown > li:hover > a {
   color: #fff;
-  background-color: #4caf50;
+  background-color: #fcc623;
 }
 .dropdown li a.active,
 .sub-dropdown li a.active {
   color: #fff;
-  background-color: #4caf50;
+  background-color: #fcc623;
 }
 .navbar-default .navbar-nav .sup-dropdown {
   position: absolute;
@@ -464,13 +464,13 @@ ul.social-list li a i {
   display: none;
 }
 .slicknav_btn {
-  border-color: #4caf50 !important;
+  border-color: #fcc623 !important;
 }
 .slicknav_btn:hover {
-  background: #4caf50;
+  background: #fcc623;
 }
 .slicknav_menu .slicknav_icon-bar {
-  background: #4caf50;
+  background: #fcc623;
 }
 @media screen and (max-width: 767px) {
   .js .mobile-menu {

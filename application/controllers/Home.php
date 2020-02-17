@@ -18,5 +18,40 @@ class Home extends CI_Controller {
 		
 	}	
 
+	
+	public function contact()
+	{
+		$data['title'] = "Sadi Zameen";
+		
+		$this->load->view('layouts/vwHeader',$data);
+		$this->load->view('vwContact');
+		$this->load->view('layouts/vwFooter');
+		
+	}	
+
+
+	
+	public function login()
+	{
+		$data['title'] = "Sadi Zameen";
+		
+		$this->load->view('layouts/vwHeader',$data);
+		$this->load->view('vwLogin');
+		$this->load->view('layouts/vwFooter');
+		
+	}	
+
+
+	
+	public function register()
+	{
+		$data['title'] = "Sadi Zameen";
+		
+		$this->load->view('layouts/vwHeader',$data);
+		$this->load->view('vwSignup');
+		$this->load->view('layouts/vwFooter');
+		
+	}	
+
 
 }

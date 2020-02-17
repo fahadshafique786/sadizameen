@@ -1,7 +1,19 @@
 
+<style>
+.search_container_bg {
+    background: url(assets/img/banner2.jpg);
+    background-position: center;	
+    padding-top: 70px !important;	
+    padding-bottom: 270px !important;	
+}
+
+
+</style>
+
+
 
     <!-- Search Properties Start -->
-    <section class="search-properties section">
+    <section class="search-properties section search_container_bg">
       <div class="container">
         <div class="row">          
           <div class="col-md-12">            
