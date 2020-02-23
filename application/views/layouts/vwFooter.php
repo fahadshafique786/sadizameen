@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
             <!-- Start Contact Widget -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="footer-widget contact-widget">
                 <h4>
                   <a href="index.html"><img src="<?php echo  ASSETS_URL; ?>img/logo.png" class="img-responsive" alt="Footer Logo" /></a>
@@ -17,7 +17,7 @@
             <!-- End Contact Widget -->
 
             <!-- Start Address Widget -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="footer-widget">
                 <h4>
                   Contact Info
@@ -41,7 +41,7 @@
             <!-- End Address Widget -->
 
             <!-- Start latest Work Posts Widget -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="footer-widget">
                 <h4>
                   Usefull Links
@@ -58,24 +58,7 @@
               </div>
             </div>
             <!-- End latest Work  Widget -->
-
-            <!-- Start Text Widget -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="footer-widget">
-                <h4>
-                  Image Gallery
-                </h4>
-                <div class="flicker-gallery">
-                  <a href="#"><img src="<?php echo  ASSETS_URL; ?>img/flicker/img1.png" alt=""></a>
-                  <a href="#"><img src="<?php echo  ASSETS_URL; ?>img/flicker/img2.png" alt=""></a>
-                  <a href="#"><img src="<?php echo  ASSETS_URL; ?>img/flicker/img3.png" alt=""></a>
-                  <a href="#"><img src="<?php echo  ASSETS_URL; ?>img/flicker/img4.png" alt=""></a>
-                  <a href="#"><img src="<?php echo  ASSETS_URL; ?>img/flicker/img5.png" alt=""></a>
-                  <a href="#"><img src="<?php echo  ASSETS_URL; ?>img/flicker/img6.png" alt=""></a>
-                </div>
-              </div>
-            </div>
-            <!-- End Text Widget -->
+ 
           </div>      
         </div>
       </footer>
