@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="author" content="EstateX">
-    <title>Map EstateX – Real Estate Theme Bootstrap HTML5 Template</title>
+    <title>SadiZameen</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo  ASSETS_URL; ?>img/favicon.png">
+    <link rel="shortcut icon" href="<?php echo  ASSETS_URL; ?>img/logo.png">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo  ASSETS_URL; ?>css/bootstrap.min.css" type="text/css">    
@@ -138,7 +138,7 @@
           <div class="row">
             <div class="col-md-5 col-sm-6">
               <div class="header-logo">
-                <a href=""><img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt=""></a>
+                <a href=""><img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt=""  style="width:168px;"></a>
               </div>
               <div class="name-title">
 
@@ -147,7 +147,7 @@
             <div class="col-md-7 col-sm-6">
               <div class="contact pull-right">
                 <div class="call">                  
-                  <h3><i class="icon-phone"></i> (213) 974-3211</h3>
+                  <h3><i class="icon-phone"></i> (92) 344-6952125</h3>
                   <p>info@sadizameen.com</p>
                 </div>
                   <div class="box-language hide">

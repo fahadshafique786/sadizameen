@@ -24,13 +24,13 @@
                 </h4>
                 <ul class="address">
                   <li>
-                    <a href="#"><i class="icon-location-pin"></i> York Blvd, Los Angeles, US</a>
+                    <a href="#"><i class="icon-location-pin"></i> DHA 3 , LAHORE, PAKISTAN</a>
                   </li>
                   <li>
                     <a href="#"><i class="icon-phone"></i> (518) 2014-040 43</a>
                   </li>
                   <li>
-                    <a href="#"><i class="icon-envelope"></i> hello@estatex.com</a>
+                    <a href="#"><i class="icon-envelope"></i> info@sadizameen.com</a>
                   </li>
                   <li>
                     <a href="#"><i class="fa fa-fax"></i> FAX:(123) 123-4567</a>

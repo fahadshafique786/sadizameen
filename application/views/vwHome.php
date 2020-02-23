@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row">          
           <div class="col-md-12">            
-            <h2 class="section-title">Search Properties</h2>            
+            <h2 class="section-title" style="color: #fcc623;">Search Properties</h2>            
           </div>  
           <!-- Start Search box -->
           <div class="search-bar">
