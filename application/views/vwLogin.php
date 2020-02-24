@@ -1,12 +1,12 @@
 
     <!-- Page Header Start -->
-    <div class="page-header" style="background: url(assets/img/banner1.jpg);">
+    <div class="page-header" style="background: url(<?php echo ASSETS_URL; ?>img/banner1.jpg);">
       <div class="container">
         <div class="row">         
           <div class="col-md-12">
             <div class="breadcrumb-wrapper">
               <h2 class="page-title">Login to account</h2>
-              <a href="index.html">Home</a>
+              <a href="<?php echo base_url();?>">Home</a>
               <span>/</span>
               <span class="current">Login</span>
             </div>
@@ -25,17 +25,27 @@
               <h3>
                 Login
               </h3>
-              <form class="login-form">
+				<?php
+				if($this->session->flashdata('error')) :
+				?>
+					<span class="alert-danger alert d-block">
+						<?php  echo $this->session->flashdata('error');?>
+					</span>
+				<?php
+				endif;
+				?>	
+					
+				<form class="login-form" method="POST" action="AuthProcess">
                 <div class="form-group">
                   <div class="input-icon">
                     <i class="icon-user"></i>
-                    <input type="text" id="sender-email" class="form-control" name="email" placeholder="Username">
+                    <input type="text" id="username" class="form-control" name="username" placeholder="Username"	required >
                   </div>
                 </div> 
                 <div class="form-group">
                   <div class="input-icon">
                     <i class="icon-lock-open"></i>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password"	required >
                   </div>
                 </div> 
                 <div class="form-group">
