@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['contact'] = 'Home/contact';
 $route['createAccount'] = 'Home/createAccount';
 $route['user/dashboard'] = 'Home/userdashboard';
+$route['AuthProcess'] = 'Home/AuthProcess';
 $route['login'] = 'Home/login';
 $route['register'] = 'Home/register';
 #$route['contact'] = 'Home/contact';

@@ -1,12 +1,12 @@
 
     <!-- Page Header Start -->
-    <div class="page-header" style="background: url(<?php ASSETS_URL; ?>/img/banner1.jpg);">
+    <div class="page-header" style="background: url(<?php echo ASSETS_URL; ?>img/banner1.jpg);">
       <div class="container">
         <div class="row">         
           <div class="col-md-12">            
             <div class="breadcrumb-wrapper">
               <h2 class="page-title">Dashboard</h2>
-              <a href="index.html">Home</a>
+              <a href="<?php echo base_url();?>">Home</a>
               <span>/</span>
               <span class="current">Dashboard</span>
             </div>
@@ -20,16 +20,25 @@
     <div id="content">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-9 col-md-offset-2 page-content">
+			<?php
+			if($this->session->flashdata('welcome')) :
+			?>
+				<span class="alert-success alert d-block">
+					<?php  echo $this->session->flashdata('welcome');?>
+				</span>
+			<?php
+			endif;
+			?>
+				<div class="col-sm-12 col-md-12 col-md-offset-0 page-content">
             <div class="inner-box">
               <div class="usearadmin">
-               <h3><a href="#"><img class="userimg" src="assets/img/user.jpg" alt=""> Justyna Michallek</a></h3>
+               <h3><a href="#"><img class="userimg" src="assets/img/user.jpg" alt=""> Welcome </a></h3>
               </div>
             </div>
             <div class="inner-box">
               <div class="welcome-msg">
-                <h3 class="page-sub-header2 no-padding">Hello Justyna Michallek </h3>
-                <span class="page-sub-header-sub small">You last logged in at: 03-01-2017 10:30 AM [US time (GMT + 6:00hrs)]</span> 
+                <h3 class="page-sub-header2 no-padding"> <?php echo $this->session->userdata('username');?> </h3>
+                <span class="page-sub-header-sub small"></span> 
               </div>
               <div id="accordion" class="panel-group">
                 <div class="panel panel-default">
@@ -45,7 +54,7 @@
                         </div>
                         <div class="form-group">
                           <label class="control-label">Last name</label>
-                          <input class="form-control" type="text">
+                          <input class="form-control" type="text"	required >
                         </div>
                         <div class="form-group">
                           <label class="control-label">Email</label>

@@ -209,7 +209,7 @@
               <!-- Start Navigation List -->
               <ul class="nav navbar-nav">
                 <li>
-                  <a class="active" href="Home">
+                  <a class="active" href="<?php echo base_url();?>">
                   Home
                   </a>
                 </li>
@@ -436,5 +436,12 @@
 
     </div>
     <!-- Header Section End -->
-    
-    <!-- Large Map -->
+       
+	<style>
+		.d-block
+		{
+			display:block;
+		}
+ 
+	</style>
+	
