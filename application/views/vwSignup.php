@@ -1,4 +1,13 @@
-    <!-- Page Header Start -->
+   
+	<style>
+		.d-block
+		{
+			display:block;
+		}
+ 
+	</style>
+
+   <!-- Page Header Start -->
     <div class="page-header" style="background: url(assets/img/banner1.jpg);">
       <div class="container">
         <div class="row">         
@@ -24,11 +33,37 @@
               <h3>
                 Register
               </h3>
-              <form class="login-form">
+				<?php
+				if($this->session->flashdata('success')) :
+				?>
+					<span class="alert-success alert d-block">
+						<?php  echo $this->session->flashdata('success');?>
+					</span>
+				<?php
+				endif;
+				?>
+
+				<?php
+				if($this->session->flashdata('error')) :
+				?>
+					<span class="alert-danger alert d-block">
+						<?php  echo $this->session->flashdata('error');?>
+					</span>
+				<?php
+				endif;
+				?>
+
+              <form class="login-form" method="POST" action = "createAccount" >
                 <div class="form-group">
                   <div class="input-icon">
                     <i class="icon-user"></i>
-                    <input type="text" class="form-control" name="name" placeholder="Username">
+                    <input type="text" class="form-control" name="first_name" placeholder="First Name">
+                  </div>
+                </div>
+				<div class="form-group">
+                  <div class="input-icon">
+                    <i class="icon-user"></i>
+                    <input type="text" class="form-control" name="username" placeholder="Username">
                   </div>
                 </div> 
                 <div class="form-group">
@@ -40,7 +75,7 @@
                 <div class="form-group">
                   <div class="input-icon">
                     <i class="icon-lock"></i>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password"  class="form-control" placeholder="Password">
                   </div>
                 </div>  
                 <div class="form-group">
@@ -49,10 +84,6 @@
                     <input type="password" class="form-control" placeholder="Retype Password">
                   </div>
                 </div>                 
-                <div class="checkbox">
-                  <input type="checkbox" id="remember" name="rememberme" value="forever" style="float: left;">
-                  <label for="remember">By creating account you agree to our Terms & Conditions</label>
-                </div>
                 <button class="btn btn-common log-btn">Register</button>
               </form>
             </div>
