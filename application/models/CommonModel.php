@@ -16,4 +16,18 @@ class CommonModel extends CI_Model
 		return ($query->num_rows() > 0)  ? $query->row_array()  : false;
 
 	}
+
+	function getAllData($table,$cols,$clause)
+	{
+		if($clause)
+		{
+			//$this->db->where('username',$user);
+		}
+		
+		$this->db->select($cols);
+		$query = $this->db->get($table);
+		
+		return ($query->num_rows() > 0)  ? $query->result_array()  : false;
+
+	}
 }
