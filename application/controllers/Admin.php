@@ -43,6 +43,16 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/data_table');
 		$this->load->view('admin/layouts/vwFooter');
 		
+	}
+	
+	public function advanced()
+	{
+		$data['title'] = "Sadi Zameen";
+		
+		$this->load->view('admin/layouts/vwHeader',$data);
+		$this->load->view('admin/advanced');
+		$this->load->view('admin/layouts/vwFooter');
+		
 	}	
 
 }

@@ -30,6 +30,21 @@
   <link rel="stylesheet" href="<?php echo  ADMIN_ASSETS_URL; ?>bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo  ADMIN_ASSETS_URL; ?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  
+  
+    <!-- Select2 -->
+  <link rel="stylesheet" href="<?php echo  ADMIN_ASSETS_URL; ?>bower_components/select2/dist/css/select2.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="<?php echo  ADMIN_ASSETS_URL; ?>bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- Bootstrap time Picker -->
+  <link rel="stylesheet" href="<?php echo  ADMIN_ASSETS_URL; ?>plugins/timepicker/bootstrap-timepicker.min.css">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="<?php echo  ADMIN_ASSETS_URL; ?>bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="<?php echo  ADMIN_ASSETS_URL; ?>plugins/iCheck/all.css">
+ 
+ <link rel="stylesheet" href="<?php echo  ADMIN_ASSETS_URL; ?>bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +56,7 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition  sidebar-mini skin-yellow">
 <div class="wrapper">
 
   <header class="main-header">
@@ -160,3 +175,19 @@
     </section>
     <!-- /.sidebar -->
   </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        <?php echo $page_title;?>
+        <small>Preview</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">        <?php echo $page_title;?> </a></li>
+         <li class="active">   <?php echo $sub_title;?></li>
+      </ol>
+    </section>
