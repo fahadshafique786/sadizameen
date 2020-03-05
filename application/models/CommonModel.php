@@ -17,7 +17,7 @@ class CommonModel extends CI_Model
 
 	}
 
-	function getAllData($table,$cols,$clause)
+	function getAllData($table,$cols,$clause = false)
 	{
 		if($clause)
 		{
@@ -30,4 +30,34 @@ class CommonModel extends CI_Model
 		return ($query->num_rows() > 0)  ? $query->result_array()  : false;
 
 	}
+	
+	function getRowData($table,$cols,$clause = false)
+	{
+		$this->db->select($cols);
+		$query = $this->db->get($table);
+		
+		return ($query->num_rows() > 0)  ? $query->row_array()  : false;
+	}
+	
+	function update($table,$set,$whereClause)
+	{
+		if($whereClause )
+		{
+			$this->db->where($whereClause);
+		}
+
+		$this->db->set($set);
+		$this->db->update($table);
+		//$query  = $this->db->get();
+		
+		return ($this->db->affected_rows() > 0)  ? $this->db->affected_rows()  : false;
+	}
+	
+	function erase($table,$clause = false)
+	{
+//		$query = $this->db->get($table);		
+//		return ($query->num_rows() > 0)  ? $query->row_array()  : false;
+	}
+	
+	
 }

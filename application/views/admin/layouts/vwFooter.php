@@ -265,6 +265,7 @@
 <!-- DataTables -->
 <script src="<?php echo  ADMIN_ASSETS_URL; ?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo  ADMIN_ASSETS_URL; ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="<?php echo  ADMIN_ASSETS_URL; ?>dist/custom/custom_scripts.js"></script>
 
 
 
@@ -341,7 +342,7 @@
 	
   $(function () {
 	$('#example1').DataTable()
-	$('#example2').DataTable({
+	$('.dataTables').DataTable({
 	  'paging'      : true,
 	  'lengthChange': true,
 	  'searching'   : true,
