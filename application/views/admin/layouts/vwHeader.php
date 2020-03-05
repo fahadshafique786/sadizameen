@@ -187,7 +187,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">        <?php echo $page_title;?> </a></li>
-         <li class="active">   <?php echo $sub_title;?></li>
-      </ol>
+        <li><a href="#">        <?php echo (isset($page_title)) ? $page_title : "" ;?> </a></li>
+        <li class="active" >    <?php echo (isset($sub_title)) ? $sub_title : "" ;?>   </li>
+       </ol>
     </section>

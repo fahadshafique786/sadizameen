@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-//$config['base_url'] = 'http://localhost/sadizameen/';
-$config['base_url'] = 'http://sadizameen.com/';
+$config['base_url'] = 'http://localhost/sadizameen/';
+//$config['base_url'] = 'http://sadizameen.com/';
 
 define('ASSETS_URL', $config['base_url'] . 'assets/') ; 		
 define('ADMIN_ASSETS_URL', $config['base_url'] . 'assets/admin/') ;
