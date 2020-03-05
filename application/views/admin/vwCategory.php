@@ -49,7 +49,7 @@
 			  <div class="row">
 				<div class="col-md-12">
 
-					<form id="city_form" class="" method="POST" action="save_city">
+					<form id="city_form" class="" method="POST" action="save_category">
 					  <div class="form-group">
 					  
 						<label>Name</label>

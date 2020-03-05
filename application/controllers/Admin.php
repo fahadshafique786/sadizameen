@@ -10,8 +10,7 @@ class Admin extends CI_Controller {
 	
 	public function index()
 	{
-		$data['title'] = "Sadi Zameen";
-		
+		$data['title'] = "Sadi Zameen";		
 		$this->load->view('admin/vwLogin');
 	}	
 
