@@ -6,7 +6,7 @@ class Admin extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-    }
+	}
 	
 	public function index()
 	{
@@ -19,6 +19,7 @@ class Admin extends CI_Controller {
 	public function dashboard()
 	{
 		$data['title'] = "Sadi Zameen";
+		$data['page_title'] = "Dashboard";
 		
 		$this->load->view('admin/layouts/vwHeader',$data);
 		$this->load->view('admin/vwDashboard');
@@ -30,7 +31,7 @@ class Admin extends CI_Controller {
 		$data['title'] = "Sadi Zameen";
 		
 		$this->load->view('admin/layouts/vwHeader',$data);
-		$this->load->view('admin/simple_table');
+		$this->load->view('admin/simple_table',$data);
 		$this->load->view('admin/layouts/vwFooter');
 		
 	}	
@@ -40,7 +41,7 @@ class Admin extends CI_Controller {
 		$data['title'] = "Sadi Zameen";
 		
 		$this->load->view('admin/layouts/vwHeader',$data);
-		$this->load->view('admin/data_table');
+		$this->load->view('admin/data_table',$data);
 		$this->load->view('admin/layouts/vwFooter');
 		
 	}
@@ -50,7 +51,7 @@ class Admin extends CI_Controller {
 		$data['title'] = "Sadi Zameen";
 		
 		$this->load->view('admin/layouts/vwHeader',$data);
-		$this->load->view('admin/advanced');
+		$this->load->view('admin/advanced',$data);
 		$this->load->view('admin/layouts/vwFooter');
 		
 	}	
