@@ -22,7 +22,51 @@ class City extends CI_Controller {
 		$this->load->view('admin/layouts/vwFooter');
 	}	
 
-	public function saveCity()
+	public function store()
+	{
+		$data = array();
+		
+		$data['name'] = $this->input->post('name');
+		$data['created_on'] = date("Y-m-d");
+
+		if($this->common->create('sz_city',$data))
+		{
+			$this->session->set_flashdata('success', 'Data Successfully Saved! ');
+		}
+		else
+		{
+			$this->session->set_flashdata('error', 'Data Not Saved!.');
+		}
+		
+		redirect('admin/city');		
+	}	
+		
+
+	public function update($isAjax = true)
+	{
+		$data = array();
+		
+		$data['name'] = $this->input->post('name');
+
+		$where['id']  = $this->input->post('hidden_key');
+
+		if($this->common->update('sz_city',$data,$where))
+		{
+			$status = 1;
+			$message = "Data Successfully Updated!";
+		}
+		else
+		{
+			$status = 0;
+			$message = "Data Not Updated!";
+		}
+		
+		echo json_encode(array('status'=>$status,'message'=>$message));
+		exit();	
+	}	
+		
+
+	public function destroy()
 	{
 		$data = array();
 		
