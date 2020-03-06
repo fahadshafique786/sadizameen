@@ -1,11 +1,17 @@
 
 <style>
 .search_container_bg {
-    background: url(assets/img/banner2.jpg);
     background-position: center;	
     padding-top: 70px !important;	
     padding-bottom: 270px !important;	
 }
+
+.search-box-row {
+    background: rgba(0,0,0,0.5);
+    padding: 3em 1em;
+    border-radius: 10px;
+}
+
 
 
 </style>
@@ -15,7 +21,7 @@
     <!-- Search Properties Start -->
     <section class="search-properties section search_container_bg">
       <div class="container">
-        <div class="row">          
+        <div class="row search-box-row">          
           <div class="col-md-12">            
             <h2 class="section-title" style="color: #fcc623;">Search Properties</h2>            
           </div>  
@@ -38,15 +44,9 @@
                   <div class="input-group-addon search-category-container">
                     <label class="styled-select location-select">
                       <select class="dropdown-product selectpicker">
-                        <option value="0">All Types</option>
-                        <option value="apartments">Apartments (2)</option>
-                        <option value="condos">Condos (1)</option>
+                        <option value="0">All Property Types</option>
                         <option value="houses">Houses (2)</option>
-                        <option value="industrial">Industrial (1)</option>
                         <option value="land">Land (2)</option>
-                        <option value="offices">Offices (1)</option>
-                        <option value="retail">Retail (2)</option>
-                        <option value="villas">Villas (1)</option>
                       </select>                                    
                     </label>
                   </div>
@@ -56,12 +56,10 @@
                     <label class="styled-select location-select">
                       <select class="dropdown-product selectpicker">
                         <option>All Cities</option>
-                        <option>New York</option>
-                        <option>California</option>
-                        <option>Washington</option>
-                        <option>Birmingham</option>
-                        <option>Chicago</option>
-                        <option>Phoenix</option>
+                        <option>Lahore</option>
+                        <option>Islanabad</option>
+                        <option>Faisalabad</option>
+                        <option>Peshawar</option>
                       </select>                                    
                     </label>
                   </div>
@@ -81,68 +79,24 @@
                     </label>
                   </div>
                 </div>
-                <div class="col-md-3 col-sm-6 search-col">
-                  <div class="input-group-addon search-category-container">
-                    <label class="styled-select location-select">
-                      <select class="dropdown-product selectpicker">
-                        <option>Bedrooms</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                      </select>                                    
-                    </label>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 search-col">
-                  <div class="input-group-addon search-category-container">
-                    <label class="styled-select location-select">
-                      <select class="dropdown-product selectpicker">
-                        <option>Bathrooms</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                      </select>                                    
-                    </label>
-                  </div>
-                </div>
                 <div class="col-md-6 col-sm-6 search-col">
-                  <div class="input-group-addon search-category-container">
-                    <label class="styled-select location-select">
-                      <select class="dropdown-product selectpicker">
-                        <option>All Status</option>
-                        <option>Invest</option>
-                        <option>Sale</option>
-                      </select>                                    
-                    </label>
-                  </div>
+                      <input type="text" placeholder ="Search Keyword" class="form-control" />
+                </div>
+
+                <div class="col-md-6 col-sm-6 search-col">
+						<a href="#" class="btn btn-common">Search</a>   
                 </div>
 
               </form>
             </div>
           </div>
           <div class="col-md-12"> 
-            <a href="#" class="btn btn-common">Search</a>   
           </div>
         </div>
       </div>
     </section>
     <!-- Search Properties End -->
-
+	</div>
     <!-- Property Section Start -->
     <section class="property section">
       <div class="container">

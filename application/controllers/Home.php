@@ -12,6 +12,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = "Sadi Zameen";
+		$data['pg'] = "home";
 		
 		$this->load->view('layouts/vwHeader',$data);
 		$this->load->view('vwHome');

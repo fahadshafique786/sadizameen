@@ -55,7 +55,7 @@
 		font-weight: bold;
 	}
 
-	.top-bar-bottom {
+	.full_width_bg.home .top-bar-bottom {
 		padding-bottom: 0px;
 		padding-top: 0;
 	}
@@ -70,372 +70,227 @@
 		background: #fcc623 !important;
 		color: #fff !important;
 	}
+	
+	.top-bar-bottom .header-logo {
+		float: left;
+		padding: 0 0 0;
+		margin-top: 14px;
+	}
+	
+	.header-logo > a
+	{
+		display:block;
+	}
 
+	.header-logo img
+	{
+		width:25% !Important;
+	}
+
+	nav.navbar.navbar-custom 
+	{
+		background: transparent;
+		border: none;
+		display: inline-block;
+		vertical-align: text-top;
+	}
+
+	.full_width_bg.home
+	{
+		background: url(assets/img/banner212.jpg);
+		background-position: center;
+	}
+	
+	.header .top-bar-bottom{
+		background:transparent;
+	}
+	
+	.navbar-custom .navbar-nav>li>a{
+		    padding-top: 25px;
+	}
+	
+	.full_width_bg.home:before {
+		content: ' ';
+		background: rgba(0,0,0,0.4);
+		width: 100%;
+		position: absolute;
+		height: 100%;
+	}	
+	
+	.full_width_bg.home .navbar-custom .navbar-nav>li>a {
+ 		color: #FFF;
+ 	}
+		
+	.navbar-custom .navbar-nav>li>a {
+		padding-top: 25px;
+		font-size: 18px;
+		letter-spacing: 1px;
+		font-weight: bold;
+	}	
+
+	.navbar-custom .navbar-nav>li>a:hover ,
+	.navbar-custom .navbar-nav>li>a:focus {
+		background: transparent !important;
+		color: #fcc623 !Important;
+	}
+
+
+	.top-bar-bottom .header-logo {
+		margin-top: 6px;
+	}
+
+	
 	</style>
     
   </head>
 
   <body>  
     <!-- Header Section Start -->
-    <div class="header">    
+    <div class="full_width_bg <?php echo (isset($pg)) ? $pg : ""; ?>">    
+		<div class="header">    
 
-      <!-- Start Top Bar -->
-      <div class="top-bar hide dp-none hidden ">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-7 col-sm-6">
-              <!-- Start Contact Info -->
-              <ul class="contact-details">
-                <li>
-                  <a href="#">
-                  <i class="icon-location-pin">
-                  </i>
-                  York Blvd, Los Angeles, US
-                  </a>
-                </li>
-              </ul>
-              <!-- End Contact Info -->
-            </div>
-            <div class="col-md-5 col-sm-6">
-              <!-- Start Social Links -->
-              <ul class="social-list">
-                <li>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-google-plus"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                </li>
-              </ul>
-              <!-- End Social Links -->
+		  <!-- Start Top Bar -->
+		  <div class="top-bar hide dp-none hidden ">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-7 col-sm-6">
+				  <!-- Start Contact Info -->
+				  <ul class="contact-details">
+					<li>
+					  <a href="#">
+					  <i class="icon-location-pin">
+					  </i>
+					  York Blvd, Los Angeles, US
+					  </a>
+					</li>
+				  </ul>
+				  <!-- End Contact Info -->
+				</div>
+				<div class="col-md-5 col-sm-6">
+				  <!-- Start Social Links -->
+				  <ul class="social-list">
+					<li>
+					  <a href="#"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li>
+					  <a href="#"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li>
+					  <a href="#"><i class="fa fa-google-plus"></i></a>
+					</li>
+					<li>
+					  <a href="#"><i class="fa fa-linkedin"></i></a>
+					</li>
+				  </ul>
+				  <!-- End Social Links -->
 
-              <!-- Login Account Start -->
-              <div class="account-setting">
-                <a href="signup.html">
-                  <i class="icon-pencil"></i>
-                  <span>Register</span>
-                </a>/
-                <a href="login.html">
-                  <i class="icon-lock"></i>
-                  <span>Login</span>
-                </a>
-              </div>
-              <!-- Login Account End -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Top Bar -->
+				  <!-- Login Account Start -->
+				  <div class="account-setting">
+					<a href="signup.html">
+					  <i class="icon-pencil"></i>
+					  <span>Register</span>
+					</a>/
+					<a href="login.html">
+					  <i class="icon-lock"></i>
+					  <span>Login</span>
+					</a>
+				  </div>
+				  <!-- Login Account End -->
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <!-- End Top Bar -->
 
-      <!-- Start bottom Bar -->
-      <div class="top-bar-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 col-sm-6">
-              <div class="header-logo">
-                <a href=""><img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt=""  style="width:168px;"></a>
-              </div>
-              <div class="name-title">
+		  <!-- Start bottom Bar -->
+		  <div class="top-bar-bottom">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-5 col-sm-6">
+				  <div class="header-logo">
+					<a href="<?php echo base_url();?>"><img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt=""  style="width:168px;"></a>
+				  </div>
 
-              </div>  
-            </div>
-            <div class="col-md-7 col-sm-6">
-              <div class="contact pull-right">
-                <div class="call">                  
-                  <h3><i class="icon-phone"></i> (92) 344-6952125</h3>
-                  <p>info@sadizameen.com</p>
-                </div>
-                  <div class="box-language hide">
-                    <form id="form-language">
-                      <div class="btn-group toggle-wrap">
-                      <span class="toggle">
-                        <span>English</span>
-                        <span class="hidden">Language</span>
-                      </span>
-                      <ul style="display: none;" class="toggle_cont pull-right">
-                        <li>
-                        <button class="language-select selected" type="button" name="en-gb">
-                        <img src="<?php echo  ASSETS_URL; ?>img/language/en-gb.png" alt="English" title="English" height="11" width="16">
-                        English </button>
-                        </li>
-                        <li>
-                        <button class="language-select" type="button" name="de-DE">
-                        <img src="<?php echo  ASSETS_URL; ?>img/language/de-DE.png" alt="Deutsch" title="Deutsch" height="11" width="16">
-                        Deutsch </button>
-                        </li>
-                        <li>
-                        <button class="language-select" type="button" name="ru-ru">
-                        <img src="<?php echo  ASSETS_URL; ?>img/language/ru-ru.png" alt="Русский" title="Русский" height="11" width="16">
-                        Русский </button>
-                        </li>
-                      </ul>
-                    </div>
-                    </form>
-                  </div>
-                  <div class="box-currency ">
-						<a href="login" class="btn header_btns " name="USD">Login </a>
-						<a href="register" class="btn header_btns " name="USD">Register </a>
-                    </form>
-                  </div>
-                  <div class="clear"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Bottom Bar -->      
+				</div>
+				
+				<!--- HIDE DIV ---->
 
-      <!-- Start  Logo & Naviagtion  -->
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="row">
-            <div class="navbar-header">
-              <!-- Stat Toggle Nav Link For Mobiles -->
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <i class="fa fa-bars"></i>
-              </button>
-              <div class="logo-wrapper hidden">
-                <a class="navbar-brand" href="">
-                  <img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt="">
-                </a>  
-              </div>
-            </div>
-            <div class="navbar-collapse collapse">
-              <!-- Start Navigation List -->
-              <ul class="nav navbar-nav">
-                <li>
-                  <a class="active" href="<?php echo base_url();?>">
-                  Home
-                  </a>
-                </li>
-				<li>
-                  <a href="contact">
-                  Contact Us
-                  </a>
-                </li>
-              </ul>
-              <!-- End Navigation List -->
-            </div>
-          </div>
-        </div>
-        <!-- End Header Logo & Naviagtion -->
+				<div class="col-md-7 col-sm-6">
+				  <nav class="navbar navbar-custom">
+					<div class="container">
+					  <div class="row">
+						<div class="navbar-header">
+						  <!-- Stat Toggle Nav Link For Mobiles -->
+						  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<i class="fa fa-bars"></i>
+						  </button>
+						  <div class="logo-wrapper hidden">
+							<a class="navbar-brand" href="">
+							  <img src="<?php echo  ASSETS_URL; ?>img/logo.png" alt="">
+							</a>  
+						  </div>
+						</div>
+						<div class="navbar-collapse collapse">
+						  <!-- Start Navigation List -->
+						  <ul class="nav navbar-nav">
+							<li>
+							  <a class="active" href="<?php echo base_url();?>">
+							  Home
+							  </a>
+							</li>
+							<li>
+							  <a href="#">
+							  About Us
+							  </a>
+							</li>
+							<li>
+							  <a href="#">
+							  Prorperty
+							  </a>
+							</li>
+							<li>
+							  <a href="contact">
+							  Contact Us
+							  </a>
+							</li>
+						  </ul>
+						  <!-- End Navigation List -->
+						</div>
+					  </div>
+					</div>
+					<!-- End Header Logo & Naviagtion -->
+				  </nav>
 
-        <!-- Mobile Menu Start -->
-        <ul class="mobile-menu">
-          <li>
-            <a class="active" href="index.html">
-            Home
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="">
-                Home V1 + Rev Slider
-              </a>
-            </li>  
-            <li>
-              <a href="normal-slider.html">
-                Home V2 + Theme Slider
-              </a>
-            </li>   
-            <li>
-              <a class="active" href="large-map.html">
-                Home V3 + Large Map
-              </a>
-            </li>   
-          </ul>
-        </li>
-        <li>
-          <a href="listing.html">
-          Listing
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="listing.html">
-              Simple Listing
-              </a>
-            </li>
-            <li>
-              <a href="listingmap.html">
-              Simple Listing With Google Map
-              </a>
-            </li>
-            <li>
-              <a href="gridlisting.html">
-              Grid Listing
-              </a>
-            </li>
-            <li>
-              <a href="listing-map.html">
-              Grid Listing with Google Map
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="property.html">
-          Property
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="property.html">
-              Default- Variation
-              </a>
-            </li>
-            <li>
-              <a href="single-property.html">
-                Single Property
-              </a>
-            </li>
-            <li>
-              <a href="full-gallery.html">
-                Full Width Gallery
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="news.html">
-          News
-          </a>
-        </li>
-        <li>
-          <a href="portfolio-4.html">
-          Gallery
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="portfolio-2.html">
-              2 Columns Gallery
-              </a>
-            </li>
-            <li>
-              <a href="portfolio-3.html">
-              3 Columns Gallery
-              </a>
-            </li>
-            <li>
-              <a href="portfolio-4.html">
-              4 Columns Gallery
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="about.html">
-          Pages
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="about.html">
-              About Us
-              </a>
-            </li>
-            <li>
-              <a href="agents.html">
-              Agents
-              </a>
-            </li>
-            <li>
-              <a href="rent.html">
-              For Rent
-              </a>
-            </li>
-            <li>
-              <a href="sale.html">
-              For Sale
-              </a>
-            </li>
-            <li>
-              <a href="miami-city.html">
-              Miami City
-              </a>
-            </li>
-            <li>
-              <a href="dashboard.html">
-              Dashboard
-              </a>
-            </li>
-            <li>
-              <a href="submission.html">
-              Submission Form
-              </a>
-            </li> 
-             <li>
-              <a href="faq.html">
-              FAQs
-              </a>
-            </li>
-             <li>
-              <a href="testimonials.html">
-              Testimonials
-              </a>
-            </li>
-             <li>
-              <a href="typography.html">
-              Typography
-              </a>
-            </li>
-             <li>
-              <a href="columns.html">
-              Columns
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="single-family.html">
-          Types
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="single-family.html">
-              Single Family Home
-              </a>
-            </li>
-            <li>
-              <a href="apartment-building.html">
-              Apartment Building
-              </a>
-            </li>
-            <li>
-              <a href="apartemnt.html">
-              Apartment
-              </a>
-            </li>
-            <li>
-              <a href="office.html">
-              Office
-              </a>
-            </li>
-             <li>
-              <a href="shop.html">
-              Shop
-              </a>
-            </li>
-             <li>
-              <a href="viall.html">
-              Villa
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="contact">
-          Contact Us
-          </a>
-        </li>
-        </ul>
-        <!-- Mobile Menu End -->
+						
+			</div>
+				
+			
+				<!--- HIDE DIV ---->
+		
+				  <nav class="navbar navbar-custom">
+					<!-- Mobile Menu Start -->
+					<ul class="mobile-menu">
+					  <li>
+						<a class="active" href="<?php echo base_url();?>">
+						Home
+					  </a>
+					  <li>
+						<a class="active" href="<?php echo base_url();?>contact">
+						Contact
+					  </a>
+					</li>
+					</ul>
+					<!-- Mobile Menu End -->
 
-      </nav>
-
-    </div>
-    <!-- Header Section End -->
+				  </nav>
+				
+				
+			  </div>
+			</div>
+		  </div>
+		  <!-- End Bottom Bar -->      
+		</div>
+		<!-- Header Section End -->
        
 	<style>
 		.d-block
