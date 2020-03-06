@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class City extends CI_Controller {
+class Location extends CI_Controller {
 
     public function __construct()
     {
@@ -12,12 +12,12 @@ class City extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = "Sadi Zameen";
-		$data['page_title'] = "City";
-		$data['pg'] = "city";
-		$data['sub_title'] = "Add New City";		
-		$data['list']	=	 $this->common->getAllData('sz_city','*',false);		
+		$data['page_title'] = "Location";
+		$data['pg'] = "location";
+		$data['sub_title'] = "Add New Location";		
+		$data['list']=$this->common->getAllData('sz_location','*',false);			
 		$this->load->view('admin/layouts/vwHeader',$data);
-		$this->load->view('admin/vwCity',$data);
+		$this->load->view('admin/vwLocation',$data);
 		$this->load->view('admin/layouts/vwFooter',$data);
 	}	
 
@@ -28,7 +28,7 @@ class City extends CI_Controller {
 		$data['name'] = $this->input->post('name');
 		$data['created_on'] = date("Y-m-d");
 
-		if($this->common->create('sz_city',$data))
+		if($this->common->create('sz_location',$data))
 		{
 			$this->session->set_flashdata('success', 'Data Successfully Saved! ');
 		}
@@ -37,11 +37,11 @@ class City extends CI_Controller {
 			$this->session->set_flashdata('error', 'Data Not Saved!.');
 		}
 		
-		redirect('admin/city');		
+		redirect('admin/location');		
 	}	
 		
-
-	public function update($isAjax = true)
+		
+		public function update($isAjax = true)
 	{
 		$data = array();
 		
@@ -49,7 +49,7 @@ class City extends CI_Controller {
 
 		$where['id']  = $this->input->post('hidden_key');
 
-		if($this->common->update('sz_city',$data,$where))
+		if($this->common->update('sz_location',$data,$where))
 		{
 			$status = 1;
 			$message = "Data Successfully Updated!";
@@ -72,7 +72,7 @@ class City extends CI_Controller {
 		$data['name'] = $this->input->post('name');
 		$data['created_on'] = date("Y-m-d");
 
-		if($this->common->create('sz_city',$data))
+		if($this->common->create('sz_location',$data))
 		{
 			$this->session->set_flashdata('success', 'Data Successfully Saved! ');
 		}
@@ -81,8 +81,7 @@ class City extends CI_Controller {
 			$this->session->set_flashdata('error', 'Data Not Saved!.');
 		}
 		
-		redirect('admin/city');		
+		redirect('admin/location');		
 	}	
-		
 
 }

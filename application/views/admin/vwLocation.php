@@ -9,7 +9,7 @@
 
 		  <div class="box box-default">
 			<div class="box-header with-border">
-			  <h3 class="box-title">Add New Area </h3>
+			  <h3 class="box-title">Add New Location </h3>
 
 			  <div class="box-tools pull-right">
 				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -49,7 +49,7 @@
 			  <div class="row">
 				<div class="col-md-12">
 
-					<form id="area_form" class="" method="POST" action="<?php echo base_url() . 'save_area' ; ?>">
+					<form id="location_form" class="" method="POST" action="<?php echo base_url() . 'save_location' ; ?>">
 					  <div class="form-group">
 					  
 						<label>Name</label>
@@ -86,7 +86,7 @@
 
 		  <div class="box box-default">
 			<div class="box-header with-border">
-			  <h3 class="box-title">List of All Area </h3>
+			  <h3 class="box-title">List of All Location </h3>
 
 			  <div class="box-tools pull-right">
 				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -105,6 +105,7 @@
 					<tr>
 					  <th>Sr#</th>
 					  <th>Name</th>
+					 
 					  <th>Action</th>
 					</tr>
 					</thead>
@@ -119,6 +120,7 @@
 								<tr>
 								  <td>'.$index.'</td>
 								  <td>'.$row["name"].'</td>
+								
 								  <td><a href="javascript:void(0);" data-id="'.$id.'" data-name="'.$name.'" class="btn btn-info openEditForm"> Edit </a >
 								  <a href="javascript:void(0);" class="btn btn-danger"> Delete </a></td>
 								</tr>

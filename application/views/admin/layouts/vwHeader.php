@@ -145,9 +145,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a href="<?php echo base_url();?>admin/category"><i class="fa fa-circle-o"></i> Category</a></li>
+            <li><a href="<?php echo base_url();?>admin/area"><i class="fa fa-circle-o"></i> Area</a></li>
+            <li><a href="<?php echo base_url();?>admin/city"><i class="fa fa-circle-o"></i> City</a></li>
+            <li><a href="<?php echo base_url();?>admin/location"><i class="fa fa-circle-o"></i> Location</a></li>
           </ul>
         </li>
         <li class="treeview">

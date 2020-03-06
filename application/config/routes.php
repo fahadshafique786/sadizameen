@@ -59,9 +59,12 @@ $route['AuthProcess'] = 'Home/AuthProcess';
 $route['admin/city'] = 'City/index';
 $route['save_city'] = 'City/store';
 $route['admin/area'] = 'Area/index';
-$route['admin/save_area'] = 'Area/saveArea';
+$route['save_area'] = 'Area/store';
 $route['admin/category'] = 'Category/index';
-$route['admin/save_category'] = 'Category/saveCategory';
+$route['save_category'] = 'Category/store';
+$route['admin/location'] = 'Location/index';
+$route['save_location'] = 'Location/store';
+
 $route['login'] = 'Home/login';
 $route['register'] = 'Home/register';
 #$route['contact'] = 'Home/contact';
