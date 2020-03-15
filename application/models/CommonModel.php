@@ -17,11 +17,11 @@ class CommonModel extends CI_Model
 
 	}
 
-	function getAllData($table,$cols,$clause = false)
+	function getAllData($table,$cols,$whereClause = false)
 	{
-		if($clause)
+		if($whereClause)
 		{
-			//$this->db->where('username',$user);
+			$this->db->where($whereClause);
 		}
 		
 		$this->db->select($cols);
@@ -55,8 +55,19 @@ class CommonModel extends CI_Model
 	
 	function erase($table,$clause = false)
 	{
-//		$query = $this->db->get($table);		
-//		return ($query->num_rows() > 0)  ? $query->row_array()  : false;
+		$this->db->where($clause);
+		$this->db->delete($table);
+		return ($this->db->affected_rows() > 0)  ? $this->db->affected_rows()  : false;
+	}
+	
+	function isExist($table,$whereClause = false)
+	{
+		if($whereClause)
+		{
+			$this->db->where($whereClause);
+		}
+		$query = $this->db->get($table);		
+		return ($query->num_rows() > 0)  ? true  : false;
 	}
 	
 	

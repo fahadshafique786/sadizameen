@@ -40,6 +40,11 @@ class City extends CI_Controller {
 		redirect('admin/city');		
 	}	
 		
+	public function loadData()
+	{
+		$data = array();	
+	}	
+		
 
 	public function update($isAjax = true)
 	{
@@ -48,16 +53,27 @@ class City extends CI_Controller {
 		$data['name'] = $this->input->post('name');
 
 		$where['id']  = $this->input->post('hidden_key');
-
-		if($this->common->update('sz_city',$data,$where))
+		
+		$clause = array('name' => $data['name']);
+		$status = 0 ;
+		$message = "" ;
+		if(!$this->common->isExist('sz_city',$clause))
 		{
-			$status = 1;
-			$message = "Data Successfully Updated!";
+			if($this->common->update('sz_city',$data,$where))
+			{
+				$status = 1;
+				$message = "Data Successfully Updated!";
+			}
+			else
+			{
+				$status = 0;
+				$message = "Data Not Updated!";
+			}			
 		}
 		else
 		{
-			$status = 0;
-			$message = "Data Not Updated!";
+				$status = 0;
+				$message = " Daya Already Exists!";
 		}
 		
 		echo json_encode(array('status'=>$status,'message'=>$message));
@@ -69,19 +85,22 @@ class City extends CI_Controller {
 	{
 		$data = array();
 		
-		$data['name'] = $this->input->post('name');
-		$data['created_on'] = date("Y-m-d");
+		$whereClause['id']  = $this->input->post('hidden_key');
 
-		if($this->common->create('sz_city',$data))
+		if($this->common->erase('sz_city',$whereClause))
 		{
-			$this->session->set_flashdata('success', 'Data Successfully Saved! ');
+			$status = 1;
+			$message = "Data Successfully Deleted!";
 		}
 		else
 		{
-			$this->session->set_flashdata('error', 'Data Not Saved!.');
+			$status = 0;
+			$message = "Data Not Deleted!";
 		}
 		
-		redirect('admin/city');		
+		echo json_encode(array('status'=>$status,'message'=>$message));
+		exit();	
+		//redirect('admin/city');		
 	}	
 		
 

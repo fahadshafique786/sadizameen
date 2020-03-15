@@ -100,7 +100,7 @@
 
 				<div class="col-md-12">
 
-				  <table id="example2" class="table table-bordered table-hover dataTables">
+				  <table id="example2" class="table table-bordered table-hover dataTables city_table">
 					<thead>
 					<tr>
 					  <th>Sr#</th>
@@ -122,7 +122,7 @@
 								  <td>'.$row["name"].'</td>
 								  <td>Pakistan</td>
 								  <td><a href="javascript:void(0);" data-id="'.$id.'" data-name="'.$name.'" class="btn btn-info openEditForm"> Edit </a >
-								  <a href="javascript:void(0);" class="btn btn-danger"> Delete </a></td>
+								  <a href="javascript:void(0);" data-id="'.$id.'"  class="btn btn-danger openDelePopup"> Delete </a></td>
 								</tr>
 								';
 							endforeach;
@@ -170,6 +170,30 @@
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				<input type="submit" class="btn btn-info" name="submit" value="Update"/> 
+			</div>
+		  </form>
+      </div>
+      
+    </div>
+  </div>	  
+
+  <!-- Modal -->
+  <div class="modal fade" id="DeleteMOdal" role="dialog">
+    <div class="modal-dialog modal-sm">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Are You Sure You Want to Delete ? </h4>
+        </div>
+		<form class="delForm" id="delForm" method="post" onSubmit="return false;">
+			<div class="modal-body">
+				<div class="form-group text-center">
+					<input class="" name="hidden_key" type="hidden" readonly />
+					<button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">No</button>
+					<input type="submit" class="btn btn-success btn-lg" name="submit" value="Yes"/> 
+				</div>
 			</div>
 		  </form>
       </div>
